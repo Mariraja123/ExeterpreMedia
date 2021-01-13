@@ -8,7 +8,7 @@ with open('t8.shakespeare.txt', 'r') as file :
     filedata = file.read()
   
 
-with open('french_dictionary.csv', 'r') as file,open('innovators.csv', 'w', newline='') as file1:
+with open('french_dictionary.csv', 'r') as file,open('result.csv', 'w', newline='') as file1:
     reader = csv.reader(file)
     writer = csv.writer(file1)
     writer.writerow(["English", "French", "Occurence"])
@@ -20,5 +20,5 @@ with open('french_dictionary.csv', 'r') as file,open('innovators.csv', 'w', newl
 
 with open('file.txt', 'w') as file:
     file.write(filedata)
-  
+print("Number of occurrences was saved in the result.csv file")
 print("Time taken to execute this program : ",datetime.now()-startTime)
